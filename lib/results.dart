@@ -9,7 +9,7 @@ class ResultsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.teal[700],
+        backgroundColor: const Color.fromARGB(255, 40, 68, 20),
         title: const Text('Detection Result'),
       ),
       body: Center(

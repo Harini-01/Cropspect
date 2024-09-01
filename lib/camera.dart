@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Crop Disease Detector',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        //primarySwatch: Colors.teal,
+        backgroundColor: const Color.fromARGB(255, 40, 68, 20),
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.green)
             .copyWith(secondary: Colors.orange),
         textTheme: const TextTheme(
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: Colors.transparent,
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.green[700],
+          backgroundColor: const Color.fromARGB(255, 40, 68, 20),
           titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         ),
       ),
@@ -121,18 +122,19 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 40, 68, 20),
         title: Row(
           children: <Widget>[
             Image.asset(
-              'assets/images/logo.png',
+              'assets/images/logo3.jpg',
               height: 70,
               width: 75,
             ),
             const SizedBox(width: 10),
-            const Text(
+            /*const Text(
               'Cropspect',
               style: TextStyle(fontStyle: FontStyle.italic),
-            ),
+            ),*/
           ],
         ),
         titleSpacing: 0,

@@ -6,7 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'results.dart';
 
 Future<Map<String, dynamic>> predictImage(File imageFile) async {
-  final url = 'http://192.168.1.9:8083/predict';  // Replace with your Flask server URL
+  final url = 'http://127.0.0.1:61314/predict';  // Replace with your Flask server URL
 var http;
   var request = http.MultipartRequest('POST', Uri.parse(url));
   

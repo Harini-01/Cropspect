@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Login.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -7,7 +8,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const String appTitle = 'Crospect';
+    const String appTitle = 'Cropspect';
     return MaterialApp(
       title: appTitle,
       theme: ThemeData(
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
           headline4: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic
+            fontStyle: FontStyle.italic,
           ),
           button: TextStyle(
             fontSize: 18,
@@ -55,19 +56,19 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal, // Background color for the splash screen
+      backgroundColor: const Color.fromARGB(255, 40, 68, 20), // Updated background color
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('images/logo.png', width: 250), // Your splash image
+            Image.asset('images/logo3.jpg', width: 250), // Your splash image
             const SizedBox(height: 20),
             const CircularProgressIndicator( // Loading indicator
               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
             ),
             const SizedBox(height: 20),
             Text(
-              'Cropspect',
+              '',
               style: Theme.of(context).textTheme.headline4?.copyWith(color: Colors.white),
             ),
           ],
@@ -78,7 +79,6 @@ class _SplashScreenState extends State<SplashScreen> {
 }
 
 // Existing LandingPage
-// Existing LandingPage
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
 
@@ -86,10 +86,11 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Welcome'),
+        title: const Text('WELCOME',style: TextStyle(color: Colors.black),),
+        
         centerTitle: true,
         elevation: 0,
-        backgroundColor: const Color.fromARGB(0, 123, 18, 18),
+        backgroundColor: const Color.fromARGB(0, 40, 68, 20), // Updated background color with 0 opacity
       ),
       extendBodyBehindAppBar: true,
       body: Stack(
@@ -154,7 +155,7 @@ class LandingPage extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
+     ),
+);
+}
 }
