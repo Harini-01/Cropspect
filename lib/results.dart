@@ -9,6 +9,7 @@ class ResultsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.teal[700],
         title: const Text('Detection Result'),
       ),
       body: Center(
@@ -18,11 +19,19 @@ class ResultsPage extends StatelessWidget {
             RichText(
               text: TextSpan(
                 text: 'Disease Detected: ',
-                style: TextStyle(color: Colors.black, fontSize: 20),
+                style: TextStyle(
+                  color: Colors.teal[900],
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
                 children: <TextSpan>[
                   TextSpan(
                     text: result, // Display the dynamic result
-                    style: TextStyle(color: Colors.blueAccent, fontSize: 20),
+                    style: TextStyle(
+                      color: Colors.green[800],
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
@@ -33,17 +42,24 @@ class ResultsPage extends StatelessWidget {
             RichText(
               text: TextSpan(
                 text: 'Disease Prevention Measures:',
-                style: TextStyle(color: Colors.black, fontSize: 20),
+                style: TextStyle(
+                  color: Colors.teal[900],
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
                 children: <TextSpan>[
                   TextSpan(
                     text: ' Follow appropriate crop management practices.',
-                    style: TextStyle(color: Colors.blueAccent, fontSize: 18),
+                    style: TextStyle(
+                      color: Colors.green[700],
+                      fontSize: 20,
+                    ),
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 20),
-            _SampleCard(cardName: ''),
+            _SampleCard(cardName: 'Elevated Card'),
           ],
         ),
       ),
@@ -63,7 +79,7 @@ class _SampleCard extends StatelessWidget {
       height: 100,
       margin: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.teal[100],
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
           BoxShadow(
@@ -84,16 +100,16 @@ class _SampleCard extends StatelessWidget {
             Expanded(
               child: Text(
                 cardName,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 18,
-                  color: Colors.black87,
+                  color: Colors.teal[800],
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
           ],
         ),
-      ),
-    );
-  }
+     ),
+);
+}
 }
